@@ -3,4 +3,5 @@ def bubbleSort(nums):
     for j in range(1, len(nums)-i):
       if nums[j-1] > nums[j]:
         nums[j-1], nums[j] = nums[j], nums[j-1]
+  return nums
        

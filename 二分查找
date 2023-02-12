@@ -1,0 +1,14 @@
+# 前提：数组已经按顺序排列， 且数组中各元素不重复
+def binarySeach(nums, target):
+  left, right = 0, len(nums)-1
+  while left <= right:
+    mid = left + (right-left) // 2
+    if target < nums[mid]:
+      right = mid - 1
+    elif target > nums[mid]:
+      left = mid + 1
+    else:
+      return mid
+  else:
+    return None
+  

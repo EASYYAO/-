@@ -6,10 +6,10 @@ def partition(nums, left, right):
   tmp = nums[left]
   while left < right:
     while left < right and nums[right] >= tmp:
-      right += 1
+      right -= 1
     nums[right] = nums[left]
     while left < right and nums[left] <= tmp:
-      left -= 1
+      left += 1
     nums[left] = nums[right]
   nums[left] = tmp
   return left

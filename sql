@@ -51,3 +51,4 @@ select `id`, `name`, `score` from `student`;  查看表中部分内容
          select `name` from `employee` where `emp_id` in (select `emp_id` from `works_with` where `total_sales` > 50000); 当后一个查找有多种情况时
          
   foreign key (`manager_id`) references `employee`(`emp_id`) on delete set null； 当employee表中的emp_id被删除时，相应的manage_id就变为null
+  foreign key(`client_id`) references `client`(`client_id`) on delete cascade； 当删除时，相应表中的整行删除
